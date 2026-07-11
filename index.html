@@ -1,267 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Rumana's Kitchen</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-background:#fff8f0;
-color:#333;
-}
-
-header{
-background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-url("https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1600&q=80");
-background-size:cover;
-background-position:center;
-height:70vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
-}
-
-.hero h1{
-font-size:60px;
-}
-
-.hero p{
-margin-top:15px;
-font-size:22px;
-}
-
-.btn{
-display:inline-block;
-margin-top:25px;
-padding:14px 30px;
-background:#ff6b35;
-color:white;
-text-decoration:none;
-border-radius:40px;
-font-weight:bold;
-transition:.3s;
-}
-
-.btn:hover{
-background:#d9480f;
-}
-
-section{
-padding:60px 8%;
-}
-
-.title{
-text-align:center;
-font-size:40px;
-color:#8b0000;
-margin-bottom:40px;
-}
-
-.menu{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:15px;
-box-shadow:0 10px 25px rgba(0,0,0,.1);
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-.card h3{
-color:#8b0000;
-margin-bottom:10px;
-}
-
-.price{
-font-size:22px;
-font-weight:bold;
-color:#ff6b35;
-margin-top:15px;
-}
-
-.about{
-display:flex;
-flex-wrap:wrap;
-gap:30px;
-align-items:center;
-}
-
-.about img{
-width:100%;
-max-width:500px;
-border-radius:15px;
-}
-
-.about-text{
-flex:1;
-}
-
-footer{
-background:#8b0000;
-color:white;
-padding:30px;
-text-align:center;
-}
-
-.contact{
-text-align:center;
-font-size:18px;
-line-height:2;
-}
-
-</style>
-
-</head>
-<body>
-
-<header>
-
-<div class="hero">
-<h1>🍽️ Rumana's Kitchen</h1>
-<p>Fresh • Homemade • Delicious</p>
-
-<a class="btn"
-href="https://firojinfinity.github.io/rumana_kitchen/"
-target="_blank">
-Visit Website
-</a>
-
-</div>
-
-</header>
-
 <section>
 
-<h2 class="title">Our Special Menu</h2>
+<h2 class="title">🍴 Our Menu</h2>
 
 <div class="menu">
 
 <div class="card">
 <h3>🍗 Chicken Biriyani</h3>
-<p>Traditional aromatic biriyani cooked with premium spices.</p>
-<div class="price">₹250</div>
+<p>Authentic Dum Chicken Biriyani</p>
+<div class="price">₹170</div>
 </div>
 
 <div class="card">
-<h3>🍗 Chicken Pakoda</h3>
-<p>Crispy chicken fritters served hot.</p>
-<div class="price">₹220</div>
+<h3>🥩 Mutton Biriyani</h3>
+<p>Rich & Aromatic Mutton Biriyani</p>
+<div class="price">₹230</div>
+</div>
+
+<div class="card">
+<h3>🍗 Chicken Pakora (500 g)</h3>
+<p>Crispy Chicken Pakora</p>
+<div class="price">₹300</div>
 </div>
 
 <div class="card">
 <h3>🍛 Shibai</h3>
-<p>Authentic house special prepared with rich flavours.</p>
-<div class="price">₹180</div>
+<p>Special Homemade Shibai</p>
+<div class="price">₹50 / Plate</div>
 </div>
 
 <div class="card">
 <h3>🥘 Gravy Shibai</h3>
-<p>Special gravy version with aromatic spices.</p>
-<div class="price">₹220</div>
+<p>Delicious Gravy Shibai</p>
+<div class="price">₹70 / Plate</div>
+</div>
+
+<div class="card">
+<h3>🥩 Mutton Kasha</h3>
+<p>5 Pieces per Plate</p>
+<div class="price">₹300</div>
+</div>
+
+<div class="card">
+<h3>🍗 Chicken Kasha</h3>
+<p>6 Pieces per Plate</p>
+<div class="price">₹120</div>
 </div>
 
 <div class="card">
 <h3>🧀 Paneer Masala</h3>
-<p>Soft paneer cooked in creamy tomato gravy.</p>
-<div class="price">₹220</div>
+<p>Rich Creamy Paneer Curry</p>
+<div class="price">₹110</div>
 </div>
 
 <div class="card">
-<h3>🥖 Paratha</h3>
-<p>Fresh handmade paratha.</p>
-<div class="price">₹20</div>
+<h3>🍚 Plain Rice</h3>
+<p>Steamed Basmati Rice</p>
+<div class="price">₹60</div>
 </div>
 
 <div class="card">
-<h3>🥖 Laccha Paratha</h3>
-<p>Multi-layer crispy paratha.</p>
-<div class="price">₹30</div>
-</div>
-
-<div class="card">
-<h3>🥗 Dal Pakoda</h3>
-<p>Crispy lentil fritters.</p>
-<div class="price">₹100</div>
+<h3>🥗 Dal Pakora (500 g)</h3>
+<p>Fresh Crispy Dal Pakora</p>
+<div class="price">₹200</div>
 </div>
 
 </div>
 
 </section>
-
-<section>
-
-<h2 class="title">About Us</h2>
-
-<div class="about">
-
-<img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=80">
-
-<div class="about-text">
-
-<h2>Welcome to Rumana's Kitchen</h2>
-
-<br>
-
-<p>
-At Rumana's Kitchen, every meal is prepared with fresh ingredients,
-traditional recipes, and homemade love. We specialize in delicious
-biryani, authentic curries, crispy snacks, and freshly prepared breads.
-Whether you're ordering for your family or a special event, we are
-committed to serving quality food with exceptional taste.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="title">Contact</h2>
-
-<div class="contact">
-
-📍 Rumana's Kitchen<br><br>
-
-🌐
-<a href="https://firojinfinity.github.io/rumana_kitchen/">
-https://firojinfinity.github.io/rumana_kitchen/
-</a>
-
-</div>
-
-</section>
-
-<footer>
-
-<h3>❤️ Thank You for Visiting Rumana's Kitchen ❤️</h3>
-
-<p>Fresh Food • Great Taste • Happy Customers</p>
-
-</footer>
-
-</body>
-</html>

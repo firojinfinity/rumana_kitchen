@@ -23,17 +23,21 @@ color:#333;
 }
 
 header{
-    background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-                url("biriyani.jpg");
+    background-image:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url("biriyani.jpg");
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
+    transition: background-image 1s ease-in-out;
+
+    height:70vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
 }
 
 .hero h1{
@@ -288,5 +292,23 @@ https://firojinfinity.github.io/rumana_kitchen/
 
 </footer>
 
+<script>
+const images = [
+    "biriyani.jpg",
+    "fish.jpg"
+];
+
+let index = 0;
+const header = document.querySelector("header");
+
+setInterval(() => {
+    index = (index + 1) % images.length;
+
+    header.style.backgroundImage =
+    `linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)), url('${images[index]}')`;
+
+}, 4000); // Changes every 4 seconds
+</script>
+    
 </body>
 </html>

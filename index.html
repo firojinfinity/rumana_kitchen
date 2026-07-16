@@ -106,6 +106,24 @@ color:#ff6b35;
 margin-top:15px;
 }
 
+.status{
+margin-top:10px;
+padding:6px 12px;
+border-radius:20px;
+display:inline-block;
+font-size:14px;
+font-weight:bold;
+color:white;
+}
+
+.available{
+background:#28a745;
+}
+
+.soldout{
+background:#dc3545;
+}
+
 .about{
 display:flex;
 flex-wrap:wrap;
@@ -171,120 +189,140 @@ Will be online from Sunday 19th
 <h3>🍗 Chicken Biriyani Full</h3>
 <p>Traditional Dum Chicken Biriyani of Bengal</p>
 <div class="price">₹200</div>
+<div class="status" id="chickenBiriyaniFull"></div>
 </div>
 
 <div class="card">
 <h3>🍗 Chicken Biriyani Half</h3>
 <p>Traditional Dum Chicken Biriyani of Bengal</p>
 <div class="price">₹150</div>
+<div class="status" id="chickenBiriyaniHalf"></div>
 </div>
-    
+
 <div class="card">
 <h3>🥩 Mutton Biriyani Full</h3>
 <p>Authentic Mutton Dum Biriyani of Bengal</p>
 <div class="price">₹300</div>
+<div class="status" id="muttonBiriyaniFull"></div>
 </div>
 
 <div class="card">
 <h3>🥩 Mutton Biriyani Half</h3>
 <p>Authentic Mutton Dum Biriyani of Bengal</p>
 <div class="price">₹220</div>
+<div class="status" id="muttonBiriyaniHalf"></div>
 </div>
-    
+
 <div class="card">
 <h3>🥩 Mutton Kasha</h3>
 <p>5 Pieces per Plate</p>
 <div class="price">₹280</div>
+<div class="status" id="muttonKasha"></div>
 </div>
 
 <div class="card">
 <h3>🍗 Chicken Kasha</h3>
 <p>6 Pieces per Plate</p>
 <div class="price">₹180</div>
+<div class="status" id="chickenKasha"></div>
 </div>
 
 <div class="card">
 <h3>🐟 Fish Curry</h3>
 <p>2 Pieces per Plate</p>
 <div class="price">₹170</div>
+<div class="status" id="fishCurry"></div>
 </div>
 
 <div class="card">
 <h3>🥦 Mixed Veg Curry</h3>
-<p>per Plate</p>
+<p>Per Plate</p>
 <div class="price">₹80</div>
+<div class="status" id="mixedVeg"></div>
 </div>
 
 <div class="card">
 <h3>🥦 Aloo Gobi Curry</h3>
-<p>per Plate</p>
+<p>Per Plate</p>
 <div class="price">₹80</div>
+<div class="status" id="alooGobi"></div>
 </div>
-    
+
 <div class="card">
 <h3>🥦 Vindi Aloo Curry</h3>
-<p>per Plate</p>
+<p>Per Plate</p>
 <div class="price">₹80</div>
+<div class="status" id="vindiAloo"></div>
 </div>
 
 <div class="card">
 <h3>🥦 Patta Govi Curry</h3>
-<p>per Plate</p>
+<p>Per Plate</p>
 <div class="price">₹80</div>
+<div class="status" id="pattaGovi"></div>
 </div>
-    
+
 <div class="card">
 <h3>🍗 Chicken Pakora Boneless</h3>
 <p>500 g</p>
 <div class="price">₹400</div>
+<div class="status" id="chickenPakora"></div>
 </div>
-  
+
 <div class="card">
 <h3>🧀 Paneer Masala</h3>
 <p>Per Plate</p>
 <div class="price">₹110</div>
+<div class="status" id="paneerMasala"></div>
 </div>
 
 <div class="card">
 <h3>🧀 Choley Paneer Masala</h3>
 <p>Per Plate</p>
 <div class="price">₹100</div>
+<div class="status" id="choleyPaneer"></div>
 </div>
 
 <div class="card">
 <h3>🧀 Dhokla With Chutney</h3>
-<p>5 pices Per Plate</p>
+<p>5 Pieces Per Plate</p>
 <div class="price">₹50</div>
+<div class="status" id="dhokla"></div>
 </div>
-    
+
 <div class="card">
 <h3>🍚 Fried Rice</h3>
 <p>Per Plate</p>
 <div class="price">₹120</div>
+<div class="status" id="friedRice"></div>
 </div>
 
 <div class="card">
 <h3>🍚 Plain Rice</h3>
 <p>Per Plate</p>
 <div class="price">₹60</div>
+<div class="status" id="plainRice"></div>
 </div>
 
 <div class="card">
 <h3>🥗 Dal Pakora</h3>
 <p>500 g</p>
 <div class="price">₹200</div>
+<div class="status" id="dalPakora"></div>
 </div>
 
 <div class="card">
 <h3>🥘 Gravy Sawaiyan</h3>
 <p>Per Plate</p>
 <div class="price">₹70</div>
+<div class="status" id="gravySawaiyan"></div>
 </div>
-  
+
 <div class="card">
 <h3>🍛 Dry Sawaiyan</h3>
 <p>Per Plate</p>
 <div class="price">₹50</div>
+<div class="status" id="drySawaiyan"></div>
 </div>
   
 </div>
@@ -444,6 +482,57 @@ setInterval(() => {
     `linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)), url('${images[index]}')`;
 
 }, 4000); // Changes every 4 seconds
+</script>
+
+<script>
+
+const menuStatus = {
+
+chickenBiriyaniFull:true,
+chickenBiriyaniHalf:true,
+muttonBiriyaniFull:true,
+muttonBiriyaniHalf:true,
+muttonKasha:true,
+chickenKasha:true,
+fishCurry:false,
+mixedVeg:true,
+alooGobi:true,
+vindiAloo:true,
+pattaGovi:true,
+chickenPakora:true,
+paneerMasala:true,
+choleyPaneer:true,
+dhokla:true,
+friedRice:true,
+plainRice:true,
+dalPakora:false,
+gravySawaiyan:true,
+drySawaiyan:true
+
+};
+
+for(const item in menuStatus){
+
+const element=document.getElementById(item);
+
+if(element){
+
+if(menuStatus[item]){
+
+element.innerHTML="🟢 Available";
+element.classList.add("available");
+
+}else{
+
+element.innerHTML="🔴 Sold Out";
+element.classList.add("soldout");
+
+}
+
+}
+
+}
+
 </script>
     
 </body>
